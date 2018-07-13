@@ -21,13 +21,36 @@ public class RestaurantActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_activity);
 
-        //Log.d(TAG, "inside restaurant activity");
-
         final ArrayList<Location> locations = new ArrayList<>();
-        locations.add(new Location.Builder("Barbar").phoneNb("70-445665").build());
-        locations.add(new Location.Builder("Barbar").phoneNb("71-356484").build());
-        locations.add(new Location.Builder("Barbar").phoneNb("03-151578").build());
-        locations.add(new Location.Builder("Barbar").phoneNb("03-665454").build());
+        locations.add(new Location.Builder("Barbar")
+                .address("Hamra - PIccadilly Street، Beirut")
+                .phoneNb("01 753 330")
+                .description("One of the oldest restaurants of Beirut. Open 24 hours")
+                .image(R.drawable.barbar)
+                .build());
+        locations.add(new Location.Builder("Bliss House")
+                .phoneNb("01 366 290")
+                .address("Hamra - Bliss street")
+                .description("A landmark of Bliss St., Hamra, open 24 hours.")
+                .image(R.drawable.bliss_house)
+                .build());
+        locations.add(new Location.Builder("Kababji")
+                .phoneNb("01 74 15 55")
+                .address("Hamra st.")
+                .description("Lebanese Grills")
+                .image(R.drawable.kababji)
+                .build());
+        locations.add(new Location.Builder("T-marbouta")
+                .phoneNb("01 350 274")
+                .address("Hamra main St.")
+                .image(R.drawable.t_marbouta)
+                .build());
+        locations.add(new Location.Builder("Malak el Tawouk")
+                .image(R.drawable.malak_tawouk)
+                .phoneNb("1592")
+                .address("Hamra main St., Beirut")
+                .description("Fast food")
+                .build());
 
         LocationAdapter locationAdapter = new LocationAdapter(this,
                 R.layout.list_item_activity, locations);

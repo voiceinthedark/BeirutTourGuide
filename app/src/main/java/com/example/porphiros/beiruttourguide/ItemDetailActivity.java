@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ItemDetailActivity extends AppCompatActivity {
@@ -31,6 +32,9 @@ public class ItemDetailActivity extends AppCompatActivity {
         addressTextView.setText(mLocation.getAddress());
         phoneTextView.setText(mLocation.getPhone());
         descriptionTextView.setText(mLocation.getDescription());
+
+        ImageView img = findViewById(R.id.image_item);
+        img.setImageResource(mLocation.getImageResource());
 
 
 

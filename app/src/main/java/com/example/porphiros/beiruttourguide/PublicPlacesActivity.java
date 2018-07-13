@@ -18,10 +18,21 @@ public class PublicPlacesActivity extends AppCompatActivity {
         setContentView(R.layout.list_activity);
 
         final ArrayList<Location> locations = new ArrayList<>();
-        locations.add(new Location.Builder("Martyr Square").phoneNb("70-445665").build());
-        locations.add(new Location.Builder("Martyr Square").phoneNb("71-356484").build());
-        locations.add(new Location.Builder("Martyr Square").phoneNb("03-151578").build());
-        locations.add(new Location.Builder("Martyr Square").phoneNb("03-665454").build());
+        locations.add(new Location.Builder("Martyr Square")
+                .image(R.drawable.martyr_square)
+                .phoneNb("70-445665").build());
+        locations.add(new Location.Builder("Sanayeh Garden")
+                .image(R.drawable.sanayeh)
+                .phoneNb("71-356484").build());
+        locations.add(new Location.Builder("Zeytouna bay")
+                .image(R.drawable.zeytouna)
+                .phoneNb("03-151578").build());
+        locations.add(new Location.Builder("Horsh beirut")
+                .image(R.drawable.horsch)
+                .phoneNb("03-665454").build());
+        locations.add(new Location.Builder("Capuchins Garden")
+                .image(R.drawable.capuchins_garden)
+                .phoneNb("03-665454").build());
 
         LocationAdapter locationAdapter = new LocationAdapter(this,
                 R.layout.list_item_activity, locations);

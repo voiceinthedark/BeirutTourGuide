@@ -23,6 +23,10 @@ public class Location implements Serializable {
         return mDescription;
     }
 
+    public int getImageResource() {
+        return mImageResource;
+    }
+
     /**
      * Name of the restaurant, public place, event
      */
@@ -31,7 +35,9 @@ public class Location implements Serializable {
     private String mPhone;
     private String mDescription;
 
-    //TODO: Add image resource field
+    private int mImageResource;
+
+
 
     /**
      * private default constructor fills members with Builder fields
@@ -42,6 +48,7 @@ public class Location implements Serializable {
         mAddress = builder.mPlaceAddress;
         mPhone = builder.mPhone;
         mDescription = builder.mDescription;
+        mImageResource = builder.mImageResource;
     }
 
     /**
@@ -55,6 +62,7 @@ public class Location implements Serializable {
         private String mPlaceAddress = "N/A";
         private String mPhone = "N/A";
         private String mDescription = "N/A";
+        private int mImageResource = 0;
 
         public Builder(String name){
             this.name = name;
@@ -72,6 +80,11 @@ public class Location implements Serializable {
 
         public Builder description(String the_description){
             mDescription = the_description;
+            return this;
+        }
+
+        public Builder image(int imgResource){
+            mImageResource = imgResource;
             return this;
         }
 
