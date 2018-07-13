@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/category_background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/category_resturant"
+        style="@style/category_style"
+        android:background="@color/color_restaurant"
+        android:text="@string/restaurants"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/category_public_places"
+        style="@style/category_style"
+        android:background="@color/color_public"
+        android:text="@string/public_places"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_resturant" />
+
+    <TextView
+        android:id="@+id/category_events"
+        style="@style/category_style"
+        android:background="@color/color_event"
+        android:text="@string/events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_public_places" />
+</android.support.constraint.ConstraintLayout>
