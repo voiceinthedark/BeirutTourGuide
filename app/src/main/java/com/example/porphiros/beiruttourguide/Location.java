@@ -1,10 +1,12 @@
 package com.example.porphiros.beiruttourguide;
 
+import java.io.Serializable;
+
 /**
  * Class {@link Location} holds the information needed about restaurants, events, public places
  * etc. for the Tour guide app
  */
-public class Location {
+public class Location implements Serializable {
     public String getName() {
         return mName;
     }
@@ -15,6 +17,10 @@ public class Location {
 
     public String getPhone() {
         return mPhone;
+    }
+
+    public String getDescription() {
+        return mDescription;
     }
 
     /**
