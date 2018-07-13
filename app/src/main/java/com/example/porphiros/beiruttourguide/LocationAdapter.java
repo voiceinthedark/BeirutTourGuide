@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class LocationAdapter extends ArrayAdapter<Location> {
 
     private List<Location> mLocations;
@@ -38,8 +40,8 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         nameTextView.setText(location.getName());
         phoneTextView.setText(location.getPhone());
 
-
-
+        CircleImageView avatar = view.findViewById(R.id.avatar);
+        avatar.setImageResource(mLocations.get(position).getImageResource());
 
         return view;
     }
