@@ -18,10 +18,12 @@ public class CategoryPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
         switch (i){
             case 0:
-                return new RestaurantFragment();
+                return new OverviewFragment();
             case 1:
-                return new PublicPlacesFragment();
+                return new RestaurantFragment();
             case 2:
+                return new PublicPlacesFragment();
+            case 3:
                 return new EventsFragment();
                 default:
                     return null;
@@ -31,7 +33,7 @@ public class CategoryPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         //Three categories: Restaurants, public places and events
-        return 3;
+        return 4;
     }
 
     @Nullable
@@ -39,10 +41,12 @@ public class CategoryPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position){
             case 0:
-                return mContext.getString(R.string.restaurants);
+                return mContext.getString(R.string.overview);
             case 1:
-                return mContext.getString(R.string.public_places);
+                return mContext.getString(R.string.restaurants);
             case 2:
+                return mContext.getString(R.string.public_places);
+            case 3:
                 return mContext.getString(R.string.events);
                 default:
                     return null;

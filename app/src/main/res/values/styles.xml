@@ -28,9 +28,20 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
-
         <item name="android:paddingStart">@dimen/list_item_start_padding</item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="overview_style">
+        <item name="android:layout_height">@dimen/list_item_overview</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
     </style>
 
 </resources>
