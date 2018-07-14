@@ -43,6 +43,8 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         CircleImageView avatar = view.findViewById(R.id.avatar);
         avatar.setImageResource(mLocations.get(position).getImageResource());
 
+
+
         return view;
     }
 }

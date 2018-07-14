@@ -2,4 +2,5 @@
 <resources>
     <dimen name="list_item_height">88dp</dimen>
     <dimen name="list_item_start_padding">16dp</dimen>
+    <dimen name="list_item_layout_height">128dp</dimen>
 </resources>
