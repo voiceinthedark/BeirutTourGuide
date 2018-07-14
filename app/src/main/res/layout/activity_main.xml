@@ -9,63 +9,27 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/category_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageView
-            style="@style/icon_category_style"
-            app:srcCompat="@drawable/ic_food" />
-
-        <TextView
-            android:id="@+id/category_resturant"
-            style="@style/category_style"
+        <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
-            android:background="@color/color_restaurant"
-            android:text="@string/restaurants"
-             />
+            android:layout_height="wrap_content"
+            android:id="@+id/categorytabs"
+            app:tabIndicatorColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabMode="scrollable"
+            app:tabGravity="center">
 
-    </LinearLayout>
+        </android.support.design.widget.TabLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/icon_category_style"
-            app:srcCompat="@drawable/ic_park" />
-
-        <TextView
-            android:id="@+id/category_public_places"
-            style="@style/category_style"
-            android:layout_width="match_parent"
-            android:background="@color/color_public"
-            android:text="@string/public_places"
-             />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/icon_category_style"
-            app:srcCompat="@drawable/ic_bang" />
-
-        <TextView
-            android:id="@+id/category_events"
-            style="@style/category_style"
-            android:layout_width="match_parent"
-            android:background="@color/color_event"
-            android:text="@string/events"
-             />
-
-    </LinearLayout>
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
 
